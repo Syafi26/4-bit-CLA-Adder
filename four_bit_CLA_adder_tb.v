@@ -23,23 +23,28 @@ module four_bit_CLA_adder_tb;
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars(1);
-    a = 1100;
-    b = 1111;
-    c0 = 0;
-    //result 15
-    
-    #1;
-    a = 1100;
-    b = 1011;
+  end
+  initial begin
+//4-bit limit = 15
+    a = 15;
+    b = 14;
     c0 = 0;
     
     #1;
+    a = 15;
+    b = 13;
+    c0 = 0;
     
-    a = 1110;
-    b = 0101;
+    #1;
+    
+    a = 15;
+    b = 12;
     c0 = 0;
     
     #1;
     
   end
 endmodule
+    
+    
+  
