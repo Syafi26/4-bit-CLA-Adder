@@ -1,12 +1,13 @@
 //Developer: SYAFI MASRI
 //ID: 2000482
-//Revision: Rev1
-// Code your design here
+//Revision: Rev2
+
 module four_bit_CLA_adder(sum,c4,a,b,c0);
   input [3:0]a,b;
   input c0;
   output [3:0] sum;
   output c4;
+  /////////////////
   wire p0,p1,p2,p3;
   wire g0,g1,g2,g3;
   wire c1,c2,c3,c4;
@@ -33,3 +34,4 @@ module four_bit_CLA_adder(sum,c4,a,b,c0);
   
 endmodule
     
+  
