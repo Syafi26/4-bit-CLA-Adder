@@ -1,5 +1,6 @@
-// Code your testbench here
-// or browse Examples
+//Developer: SYAFI MASRI
+//ID: 2000482
+//Revision: Rev2
 module four_bit_CLA_adder_tb;
   
 //INPUT
@@ -25,21 +26,23 @@ module four_bit_CLA_adder_tb;
     $dumpvars(1);
   end
   initial begin
+    $monitor("INPUT A = %b,INPUT B = %0b, CARRY IN = %0b , CARRY OUT = %0b, SUM = %0b", a,b,c0,c4,sum);
+    
 //4-bit limit = 15
-    a = 15;
-    b = 14;
-    c0 = 0;
+    a = 4'b0000;// change to binary
+    b = 4'b0010;
+    c0 = 1'b0;
     
     #1;
-    a = 15;
-    b = 13;
-    c0 = 0;
+    a = 4'b0110;
+    b = 4'b0101;
+    c0 = 1'b0;
     
     #1;
     
-    a = 15;
-    b = 12;
-    c0 = 0;
+    a = 4'b1111;
+    b = 4'b1000;
+    c0 = 1'b0;
     
     #1;
     
