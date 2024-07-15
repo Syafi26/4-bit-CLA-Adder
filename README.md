@@ -1,7 +1,7 @@
 *LINK TO EDA PLAYGROUND*
 https://www.edaplayground.com/x/7vKP
 
-Description of the 4-bit Carry Lookahead Adder (CLA) Verilog Design
+**Description of the 4-bit Carry Lookahead Adder (CLA) Verilog Design**
 Module Name: four_bit_CLA_adder
 
 Developer: Syafi Masri
@@ -52,7 +52,7 @@ Functionality
     The sum for each bit is calculated using bitwise XOR: sum[i] = a[i] ^ b[i] ^ c[i].
 
 
-Description of the 4-bit Carry Lookahead Adder (CLA) Testbench Verilog Design
+**Description of the 4-bit Carry Lookahead Adder (CLA) Testbench Verilog Design**
 Module Name: four_bit_CLA_adder_tb
 
 Developer: Syafi Masri
