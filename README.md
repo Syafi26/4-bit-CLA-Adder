@@ -50,3 +50,43 @@ Functionality
   Sum Calculation:
   
     The sum for each bit is calculated using bitwise XOR: sum[i] = a[i] ^ b[i] ^ c[i].
+
+
+Description of the 4-bit Carry Lookahead Adder (CLA) Testbench Verilog Design
+Module Name: four_bit_CLA_adder_tb
+
+Developer: Syafi Masri
+Revision: Rev2
+
+Overview
+The provided Verilog code is a testbench for testing the functionality of the 4-bit Carry Lookahead Adder (CLA) module. A testbench is a piece of code used to simulate and verify the design of a digital circuit by applying various input stimuli and observing the outputs.
+
+Testbench Ports and Signals
+  Inputs:
+  
+    a (4 bits): First operand.
+    b (4 bits): Second operand.
+    c0 (1 bit): Initial carry-in.
+    
+  Outputs:
+
+    sum (4 bits): Sum of the input operands.
+    c4 (1 bit): Final carry-out.
+    
+Module Instantiation
+
+  The four_bit_CLA_adder module is instantiated within the testbench with the instance name uut (unit under test).
+  The inputs a, b, and c0 are connected to the corresponding ports of the CLA module.
+  The outputs sum and c4 are connected to the corresponding ports of the CLA module.
+
+Simulation Initialization
+
+  The $dumpfile and $dumpvars system tasks are used to create a dump file (dump.vcd) for waveform viewing.
+  The $monitor system task is used to continuously print the input and output signals to the console.
+
+Test Cases
+  Several test cases are defined within an initial block to apply different input values and observe the results:
+  
+      Test Case 1: a = 4'b0000, b = 4'b0010, c0 = 1'b0
+      Test Case 2: a = 4'b0110, b = 4'b0101, c0 = 1'b0
+      Test Case 3: a = 4'b1111, b = 4'b1000, c0 = 1'b0
