@@ -1,2 +1,52 @@
 *LINK TO EDA PLAYGROUND*
 https://www.edaplayground.com/x/7vKP
+
+Description of the 4-bit Carry Lookahead Adder (CLA) Verilog Design
+Module Name: four_bit_CLA_adder
+
+Developer: Syafi Masri
+Revision: Rev2
+
+Overview
+The provided Verilog code implements a 4-bit Carry Lookahead Adder (CLA). The CLA is a type of adder used in digital logic circuits to add two 4-bit binary numbers efficiently. The primary advantage of the CLA over other adders, such as the ripple carry adder, is that it significantly reduces the time required to compute the carry bits.
+
+Ports
+  Inputs:
+  
+    a (4 bits): First operand.
+    b (4 bits): Second operand.
+    c0 (1 bit): Initial carry-in.
+    
+  Outputs:
+  
+    sum (4 bits): Sum of the input operands.
+    c4 (1 bit): Final carry-out.
+    Internal Signals
+    
+  Generate and Propagate Signals:
+  
+    p0, p1, p2, p3: Propagate signals for each bit.
+    g0, g1, g2, g3: Generate signals for each bit.
+    
+  Carry Signals:
+
+    c1, c2, c3, c4: Intermediate carry signals.
+    
+Functionality
+  Generate and Propagate Calculation:
+  
+    Propagate signals are calculated using bitwise OR: p[i] = a[i] | b[i].
+    Generate signals are calculated using bitwise AND: g[i] = a[i] & b[i].
+    
+  Carry Calculation:
+  
+    The carry for each bit is calculated using the propagate and generate signals:
+    
+      c1 = g0 | (p0 & c0)
+      c2 = g1 | (p1 & g0) | (p1 & p0 & c0)
+      c3 = g2 | (p2 & g1) | (p2 & p1 & g0) | (p2 & p1 & p0 & c0)
+      c4 = g3 | (p3 & g2) | (p3 & p2 & g1) | (p3 & p2 & p1 & g0) | (p3 & p2 & p1 & p0 & c0)
+      
+  Sum Calculation:
+  
+    The sum for each bit is calculated using bitwise XOR: sum[i] = a[i] ^ b[i] ^ c[i].
