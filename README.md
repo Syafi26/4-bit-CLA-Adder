@@ -4,7 +4,9 @@ https://www.edaplayground.com/x/rjXZ
 # **Description of the 4-bit Carry Lookahead Adder (CLA) Verilog Design**
 Module Name: four_bit_CLA_adder
 
-![image](https://github.com/user-attachments/assets/98f5054a-287d-4a99-a64f-0a29db62f381)
+<p align="center">
+  <img width="460" height="300" src="[https://github.com/user-attachments/assets/98f5054a-287d-4a99-a64f-0a29db62f381]">
+</p>
 
 
 Developer: Syafi Masri
