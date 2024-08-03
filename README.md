@@ -5,7 +5,7 @@ https://www.edaplayground.com/x/rjXZ
 Module Name: four_bit_CLA_adder
 
 <p align="center">
-  <img width="460" height="300" src="[https://github.com/user-attachments/assets/98f5054a-287d-4a99-a64f-0a29db62f381]">
+  <img width="460" height="300" src="https://github.com/user-attachments/assets/98f5054a-287d-4a99-a64f-0a29db62f381">
 </p>
 
 
